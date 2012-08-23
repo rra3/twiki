@@ -1,0 +1,13 @@
+
+<p class="label"><span class="label">Name:</span> <%= @grocery_list.name %></p>
+<p class="label"><span class="label">Description:</span> <%= @grocery_list.description %></p>
+<p class="label"><span class="label">Created:</span> <%= @grocery_list.created_at %>
+<br />
+<ul>
+<% for i in @grocery_list.items  %>
+	<li><%= i.name %>: <i><%= i.description %></i></li>
+<% end %>
+</ul>
+
+
+<%= link_to "edit", edit_grocery_list_url %>
