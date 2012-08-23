@@ -1,5 +1,5 @@
 <ul>
 	<% for gl in @grocery_lists%>
-		<li> <%= link_to(gl.name, grocery_list_url(gl)) %> &nbsp; &nbsp;<%= gl.created_at %></li>
+		<li> <%= link_to(gl.name, grocery_list_url(gl)) %> &nbsp; &nbsp;<i><%= gl.created_at.strftime("%a, %b %d %Y") %></i></li>
 	<% end %>	
 </ul>
