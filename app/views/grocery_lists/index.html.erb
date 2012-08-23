@@ -3,3 +3,7 @@
 		<li> <%= link_to(gl.name, grocery_list_url(gl)) %> &nbsp; &nbsp;<i><%= gl.created_at.strftime("%a, %b %d %Y") %></i></li>
 	<% end %>	
 </ul>
+
+<div>
+	<%= link_to("Create a new grocery list", new_grocery_list_url) %>
+</div>

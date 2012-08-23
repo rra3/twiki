@@ -1,5 +1,5 @@
 Twiki::Application.routes.draw do
-  
+  root :to => 'grocery_lists#index'
   resources :grocery_lists
   # The priority is based upon order of creation:
   # first created -> highest priority.
