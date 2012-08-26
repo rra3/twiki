@@ -17,12 +17,8 @@
 	<%= f.text_field :description %><br />
 	
   <%= f.fields_for :items do |builder| %>
-	<fieldset>
-		<%= builder.label :name, "Item Name:" %>
-		<%= builder.text_field :name %> 
-		<%= builder.label :description, "Item Description:" %> 
-		<%= builder.text_field :description %>
-	</fieldset>
+	<%= render 'edit_items', f: builder %>
+
   <% end %>
   <div class="actions">
     <%= f.submit %>
